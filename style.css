@@ -57,7 +57,7 @@ main {
   border: 2px solid #004aad;
 }
 .logo {
-  max-height: 80px;  /* Change number to resize logo */
+  max-height: 140px;  /* Change number to resize logo */
   width: auto;       /* Keeps proportions correct */
   display: block;
   margin: 0 auto;    /* Centers logo horizontally */
