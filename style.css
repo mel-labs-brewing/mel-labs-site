@@ -6,12 +6,20 @@ body {
 }
 
 header {
-  background: #004aad;
+  position: relative;           /* needed for bubble layers */
+  background: #004aad;          /* your blue */
   color: white;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;             /* hide animated bubble overflow */
+}
+
+/* keep header content above the bubbles */
+header * {
+  position: relative;
+  z-index: 2;
 }
 
 header nav a {
@@ -56,9 +64,9 @@ main {
 .card.highlight {
   border: 2px solid #004aad;
 }
+
 .logo {
   max-height: 140px;  /* Change number to resize logo */
-  width: auto;       /* Keeps proportions correct */
+  width: auto;        /* Keeps proportions correct */
   display: block;
-  margin: 0 auto;    /* Centers logo horizontally */
-}
+  margin: 0 auto;     /
