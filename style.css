@@ -24,8 +24,10 @@ header * {
 
 header nav a {
   color: white;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 header nav a:hover {
@@ -66,7 +68,7 @@ main {
 }
 
 .logo {
-  max-height: 140px;  /* Change number to resize logo */
+  max-height: 180px;  /* Change number to resize logo */
   width: auto;        /* Keeps proportions correct */
   display: block;
   margin: 0 auto;     /* Centers logo horizontally */
