@@ -10,7 +10,7 @@
       text-align: center;
     }
     .card {
-      max-width: 450px;
+      max-width: 500px;
       margin: 2rem auto;
       padding: 1.5rem;
       border: 1px solid #ddd;
@@ -19,11 +19,21 @@
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    .price {
+    .old-price {
+      font-size: 1.2rem;
+      color: #999;
+      text-decoration: line-through;
+      margin-right: 0.5rem;
+    }
+    .new-price {
       font-size: 2rem;
       font-weight: bold;
       color: #0077cc;
-      margin: 1rem 0;
+    }
+    .regular-price {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #333;
     }
     .email-button {
       display: inline-block;
@@ -34,6 +44,7 @@
       border-radius: 5px;
       font-weight: bold;
       transition: background 0.2s ease-in-out;
+      margin-top: 1rem;
     }
     .email-button:hover {
       background: #005fa3;
@@ -47,6 +58,11 @@
     .steps li {
       margin-bottom: 0.8rem;
     }
+    .note {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -54,16 +70,10 @@
     <h1>
       <img src="images/MEL-labs-logo.png" alt="MEL Laboratories Logo" class="logo"/>
     </h1>
-
-    <!-- Hamburger button -->
-    <button class="hamburger" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
+      ☰ Menu
     </button>
-
-    <!-- Nav links -->
-    <nav class="nav-links">
+    <nav>
       <a href="index.html">Home</a>
       <a href="pricing.html">Pricing</a>
       <a href="treatment.html">Water Treatment Packets</a>
@@ -74,9 +84,13 @@
   <main>
     <h2 class="center-text">Simple, Affordable Pricing</h2>
 
+    <!-- First Test Special -->
     <div class="card">
-      <h3>First Test</h3>
-      <p class="price">$24</p>
+      <h3>First Test Special</h3>
+      <p>
+        <span class="old-price">$34</span>
+        <span class="new-price">$24</span>
+      </p>
       <p>One-time water analysis for homebrewing.  
          <br><strong>Pay only after results are delivered.</strong></p>
 
@@ -90,8 +104,32 @@
         <li>📦 You ship your water sample (12–16 oz) at your expense.</li>
         <li>✉️ Track your shipment and confirm when we receive it.</li>
         <li>🧪 We complete testing within <strong>3 business days</strong>.</li>
-        <li>💳 You’ll receive an email invoice for $24.</li>
+        <li>💳 You’ll receive an email invoice for $24 (first test only).</li>
         <li>📑 Once payment is received, we’ll send your full water test report.</li>
+      </ul>
+
+      <p class="note">ℹ️ Future water tests will be billed at the regular price of <strong>$34</strong>.</p>
+    </div>
+
+    <!-- Future Tests -->
+    <div class="card">
+      <h3>Future Tests</h3>
+      <p>
+        <span class="regular-price">$34</span>
+      </p>
+      <p>Standard pricing for all water analyses after your first test.  
+         <br><strong>Same fast turnaround & detailed report.</strong></p>
+
+      <a 
+        href="mailto:mel.labs.brewing@gmail.com?subject=Future%20Water%20Test&body=Hello%20MEL%20Labs%2C%0D%0A%0D%0AI%20would%20like%20to%20order%20another%20water%20test.%20Please%20let%20me%20know%20where%20to%20send%20my%20sample.%0D%0A%0D%0AThank%20you!" 
+        class="email-button">
+        Request a Future Test
+      </a>
+
+      <ul class="steps">
+        <li>📦 Ship your water sample (12–16 oz).</li>
+        <li>🧪 Testing completed in <strong>3 business days</strong>.</li>
+        <li>💳 Invoice for $34 emailed before results are released.</li>
       </ul>
     </div>
   </main>
@@ -99,15 +137,5 @@
   <footer>
     <p>© 2025 MEL Labs | Science for Better Beer</p>
   </footer>
-
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
 </body>
 </html>
-
