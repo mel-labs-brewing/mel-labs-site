@@ -5,6 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MEL Labs – Water Treatment Packets</title>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    .form-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    form label {
+      font-weight: bold;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form input[type="submit"], form input[type="reset"] {
+      width: auto;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -25,53 +50,48 @@
 
   <main>
     <h2>Custom Water Treatment Packets</h2>
-    <p>Take your brewing to the next level! Fill out form below. We will prepare your packets and send you an invoice. One paid, we will send you your packets in time for your next brew day! Alongside our water testing service, we now offer custom water treatment packets made from food-grade minerals:</p>
-    <ul>
-      <li>Gypsum (Calcium Sulfate)</li>
-      <li>Calcium Chloride</li>
-      <li>Epsom Salt (Magnesium Sulfate)</li>
-      <li>Calcium Hydroxide (Slaked Lime)</li>
-      <li>Baking Soda (Sodium Bicarbonate)</li>
-      <li>Canning Salt (Sodium Chloride)</li>
-    </ul>
-
-    <h3>How It Works</h3>
-    <ol>
-      <li><strong>Choose your water type:</strong> either use RO water or send us a sample for testing.</li>
-      <li><strong>Tell us your batch details:</strong> mash water volume, sparge water volume, and beer style.</li>
-      <li><strong>We send you packets:</strong> one for mash water, one for sparge water, tailored to your brew.</li>
-    </ol>
+    <p>
+      Take your brewing to the next level! Simply fill out the form below, and we’ll prepare your packets and send you an invoice. Once payment is received, your custom water treatment packets will be on their way in time for your next brew day.
+    </p>
+    <p>
+      Our packets are made with food-grade brewing salts including Gypsum (Calcium Sulfate), Calcium Chloride, Epsom Salt (Magnesium Sulfate), Calcium Hydroxide (Slaked Lime), Baking Soda (Sodium Bicarbonate), and Canning Salt (Sodium Chloride).
+    </p>
+    <p>
+      The process is simple: you choose whether you’re brewing with RO water or sending us a sample for testing. Next, tell us your mash and sparge water volumes along with the beer style. We’ll create two packets—one for your mash water and one for your sparge water—tailored to your specific recipe.
+    </p>
 
     <h3>Order Form</h3>
-    <form action="mailto:info@mellabsbrewing.com" method="post" enctype="text/plain">
-      <label for="name">Your Name:</label><br>
-      <input type="text" id="name" name="name" required><br><br>
+    <div class="form-container">
+      <form action="mailto:mel.labs.brewing@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
 
-      <label for="email">Your Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="watertype">Water Type:</label><br>
-      <select id="watertype" name="Water Type" required>
-        <option value="">--Select--</option>
-        <option value="RO Water">RO / Distilled Water</option>
-        <option value="Send for Testing">Send Sample for Testing</option>
-      </select><br><br>
+        <label for="watertype">Water Type:</label>
+        <select id="watertype" name="Water Type" required>
+          <option value="">--Select--</option>
+          <option value="RO Water">RO / Distilled Water</option>
+          <option value="Send for Testing">Send Sample for Testing</option>
+        </select>
 
-      <label for="mash">Mash Water Volume (gallons or liters):</label><br>
-      <input type="text" id="mash" name="Mash Volume"><br><br>
+        <label for="mash">Mash Water Volume (gallons or liters):</label>
+        <input type="text" id="mash" name="Mash Volume">
 
-      <label for="sparge">Sparge Water Volume (gallons or liters):</label><br>
-      <input type="text" id="sparge" name="Sparge Volume"><br><br>
+        <label for="sparge">Sparge Water Volume (gallons or liters):</label>
+        <input type="text" id="sparge" name="Sparge Volume">
 
-      <label for="style">Beer Style:</label><br>
-      <input type="text" id="style" name="Beer Style"><br><br>
+        <label for="style">Beer Style:</label>
+        <input type="text" id="style" name="Beer Style">
 
-      <label for="notes">Additional Notes:</label><br>
-      <textarea id="notes" name="Notes" rows="4" cols="40"></textarea><br><br>
+        <label for="notes">Additional Notes:</label>
+        <textarea id="notes" name="Notes" rows="4"></textarea>
 
-      <input type="submit" value="Send Request">
-      <input type="reset" value="Reset">
-    </form>
+        <input type="submit" value="Send Request">
+        <input type="reset" value="Reset">
+      </form>
+    </div>
   </main>
 
   <footer>
