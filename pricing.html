@@ -54,7 +54,16 @@
     <h1>
       <img src="images/MEL-labs-logo.png" alt="MEL Laboratories Logo" class="logo"/>
     </h1>
-    <nav>
+
+    <!-- Hamburger button -->
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Nav links -->
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="pricing.html">Pricing</a>
       <a href="treatment.html">Water Treatment Packets</a>
@@ -90,6 +99,15 @@
   <footer>
     <p>© 2025 MEL Labs | Science for Better Beer</p>
   </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
 
