@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MEL Labs – Water Treatment Packets</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="images/MEL-labs-logo.png" alt="MEL Laboratories Logo" class="logo"/>
+      <span class="visually-hidden">MEL Labs – Water Treatment Packets</span>
+    </h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="https://mellabsbrewing.blogspot.com" target="_blank">Blog</a>
+      <a href="treatment.html">Water Treatment Packets</a>
+      <a href="mailto:info@mellabsbrewing.com">Contact Us</a>
+      <a href="https://www.facebook.com/profile.php?id=61580536066830" target="_blank">Facebook</a>
+      <a href="https://melusinebeerco-collab.github.io/brews-bubbles-borders/homebrewing.html" target="_blank">Customer Testimonials</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Custom Water Treatment Packets</h2>
+    <p>Take your brewing to the next level! Alongside our water testing service, we now offer custom water treatment packets made from food-grade minerals:</p>
+    <ul>
+      <li>Gypsum (Calcium Sulfate)</li>
+      <li>Calcium Chloride</li>
+      <li>Epsom Salt (Magnesium Sulfate)</li>
+      <li>Calcium Hydroxide (Slaked Lime)</li>
+      <li>Baking Soda (Sodium Bicarbonate)</li>
+      <li>Canning Salt (Sodium Chloride)</li>
+    </ul>
+
+    <h3>How It Works</h3>
+    <ol>
+      <li><strong>Choose your water type:</strong> either use RO water or send us a sample for testing.</li>
+      <li><strong>Tell us your batch details:</strong> mash water volume, sparge water volume, and beer style.</li>
+      <li><strong>We send you packets:</strong> one for mash water, one for sparge water, tailored to your brew.</li>
+    </ol>
+
+    <h3>Order Form</h3>
+    <form action="mailto:info@mellabsbrewing.com" method="post" enctype="text/plain">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Your Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="watertype">Water Type:</label><br>
+      <select id="watertype" name="Water Type" required>
+        <option value="">--Select--</option>
+        <option value="RO Water">RO / Distilled Water</option>
+        <option value="Send for Testing">Send Sample for Testing</option>
+      </select><br><br>
+
+      <label for="mash">Mash Water Volume (gallons or liters):</label><br>
+      <input type="text" id="mash" name="Mash Volume"><br><br>
+
+      <label for="sparge">Sparge Water Volume (gallons or liters):</label><br>
+      <input type="text" id="sparge" name="Sparge Volume"><br><br>
+
+      <label for="style">Beer Style:</label><br>
+      <input type="text" id="style" name="Beer Style"><br><br>
+
+      <label for="notes">Additional Notes:</label><br>
+      <textarea id="notes" name="Notes" rows="4" cols="40"></textarea><br><br>
+
+      <input type="submit" value="Send Request">
+      <input type="reset" value="Reset">
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 MEL Labs | Science for Better Beer</p>
+  </footer>
+</body>
+</html>
