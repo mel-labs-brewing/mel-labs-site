@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MEL Labs – Water Treatment Packets</title>
   <link rel="stylesheet" href="style.css"/>
+
   <style>
     .form-container {
       max-width: 800px;
@@ -38,19 +39,25 @@
   </style>
 </head>
 <body>
-  <header>
+  <!-- Blue banner with bubbles -->
+  <header class="banner">
     <h1>
       <img src="images/MEL-labs-logo.png" alt="MEL Laboratories Logo" class="logo"/>
       <span class="visually-hidden">MEL Labs – Water Treatment Packets</span>
     </h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="https://mellabsbrewing.blogspot.com" target="_blank">Blog</a>
-      <a href="treatment.html">Water Treatment Packets</a>
-      <a href="mailto:mel.labs.brewing@gmail.com">Contact Us</a>
-      <a href="https://www.facebook.com/profile.php?id=61580536066830" target="_blank">Facebook</a>
-      <a href="https://melusinebeerco-collab.github.io/brews-bubbles-borders/homebrewing.html" target="_blank">Customer Testimonials</a>
+
+    <!-- Mobile-friendly nav -->
+    <nav class="navbar">
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="https://mellabsbrewing.blogspot.com" target="_blank">Blog</a>
+        <a href="treatment.html">Water Treatment Packets</a>
+        <a href="mailto:mel.labs.brewing@gmail.com">Contact Us</a>
+        <a href="https://www.facebook.com/profile.php?id=61580536066830" target="_blank">Facebook</a>
+        <a href="https://melusinebeerco-collab.github.io/brews-bubbles-borders/homebrewing.html" target="_blank">Customer Testimonials</a>
+      </div>
     </nav>
   </header>
 
@@ -69,7 +76,7 @@
     <h3>Order Form</h3>
     <div class="form-container">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFxXplUah50eWp88QQmK6CG6Xx6Bx2bGm4LSsbecqg5jMtQQ/viewform?embedded=true" 
-        width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">
+        frameborder="0" marginheight="0" marginwidth="0">
         Loading…
       </iframe>
     </div>
@@ -84,6 +91,15 @@
   <footer>
     <p>© 2025 MEL Labs | Science for Better Beer</p>
   </footer>
+
+  <!-- Mobile nav script -->
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
 
