@@ -20,7 +20,7 @@
   <meta name="google-site-verification" content="CBPkqR9qyHHH24L9g1Vs7uhAEfZrDLQ53B6dNe1xO18" />
 
   <style>
-    /* Accessibility hidden text */
+    /* Accessibility */
     .visually-hidden {
       position: absolute;
       width: 1px;
@@ -32,108 +32,97 @@
       border: 0;
     }
 
-    /* Header with blue bubble banner */
+    /* Header banner */
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      background: linear-gradient(135deg, #0077cc, #3399ff);
-      background-image: url("images/bubbles-banner.png"); /* your bubble banner */
-      background-repeat: repeat-x;
-      background-size: cover;
-      border-bottom: 1px solid #004c80;
+      background: linear-gradient(to bottom, #0077cc, #005fa3);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
       position: relative;
-      color: #fff;
+      overflow: hidden;
     }
 
-    header img.logo {
-      max-height: 60px;
+    header h1 img {
+      max-width: 180px;
     }
 
-    /* Desktop nav */
-    nav.nav-links {
-      display: flex;
-      gap: 1rem;
+    /* Bubble animation */
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: rise 10s infinite ease-in;
     }
 
-    nav.nav-links a {
+    @keyframes rise {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-1200px) scale(0.5); opacity: 0; }
+    }
+
+    /* Nav */
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: white;
       text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      transition: color 0.2s ease;
+      margin: 0 0.8rem;
+      font-weight: bold;
     }
 
-    nav.nav-links a:hover {
-      color: #ffdd57;
-    }
-
-    /* Hamburger button (mobile only) */
+    /* Mobile nav */
     .menu-toggle {
       display: none;
-      font-size: 1.8rem;
-      cursor: pointer;
       background: none;
-      border: none;
-      color: #fff;
+      border: 2px solid white;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: white;
+      border-radius: 5px;
+      margin-top: 1rem;
     }
 
-    /* Mobile styles */
     @media (max-width: 768px) {
-      nav.nav-links {
+      nav {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 10px;
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 1rem;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        gap: 1rem;
+        margin-top: 1rem;
       }
-
-      nav.nav-links a {
-        color: #333;
-      }
-
-      nav.nav-links.active {
+      nav.active {
         display: flex;
       }
-
       .menu-toggle {
-        display: block;
+        display: inline-block;
       }
     }
 
+    /* Main content */
     main {
-      padding: 2rem;
       max-width: 800px;
-      margin: auto;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
     }
 
     .button {
       display: inline-block;
       background: #0077cc;
-      color: #fff;
-      padding: 0.6rem 1.2rem;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
       text-decoration: none;
-      border-radius: 6px;
       font-weight: bold;
       margin-top: 1rem;
-      transition: background 0.3s ease;
-    }
-
-    .button:hover {
-      background: #005fa3;
     }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background: #f4f4f4;
-      border-top: 1px solid #ddd;
       margin-top: 2rem;
+      background: #f5f5f5;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -144,11 +133,11 @@
       <span class="visually-hidden">MEL Labs – Science for Better Beer</span>
     </h1>
 
-    <!-- Hamburger menu button -->
-    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
+      ☰ Menu
+    </button>
 
-    <!-- Nav links -->
-    <nav class="nav-links">
+    <nav>
       <a href="index.html">Home</a>
       <a href="pricing.html">Pricing</a>
       <a href="https://mellabsbrewing.blogspot.com" target="_blank">Blog</a>
@@ -157,6 +146,13 @@
       <a href="https://www.facebook.com/profile.php?id=61580536066830" target="_blank">Facebook</a>
       <a href="https://melusinebeerco-collab.github.io/brews-bubbles-borders/homebrewing.html" target="_blank">Customer Testimonials</a>
     </nav>
+
+    <!-- Bubbles -->
+    <div class="bubble" style="left:10%; width:20px; height:20px; animation-duration:12s;"></div>
+    <div class="bubble" style="left:30%; width:15px; height:15px; animation-duration:10s;"></div>
+    <div class="bubble" style="left:50%; width:25px; height:25px; animation-duration:14s;"></div>
+    <div class="bubble" style="left:70%; width:18px; height:18px; animation-duration:11s;"></div>
+    <div class="bubble" style="left:90%; width:22px; height:22px; animation-duration:13s;"></div>
   </header>
 
   <main>
@@ -169,15 +165,5 @@
   <footer>
     <p>© 2025 MEL Labs | Science for Better Beer</p>
   </footer>
-
-  <script>
-    // Toggle mobile nav
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  </script>
 </body>
 </html>
