@@ -18,9 +18,9 @@
 
   <!-- Google Verification -->
   <meta name="google-site-verification" content="CBPkqR9qyHHH24L9g1Vs7uhAEfZrDLQ53B6dNe1xO18" />
-  
+
   <style>
-    /* Visually hidden text for accessibility */
+    /* Accessibility hidden text */
     .visually-hidden {
       position: absolute;
       width: 1px;
@@ -32,21 +32,26 @@
       border: 0;
     }
 
-    /* Header layout */
+    /* Header with blue bubble banner */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0.5rem 1rem;
-      background: #fff;
-      border-bottom: 1px solid #ddd;
+      background: linear-gradient(135deg, #0077cc, #3399ff);
+      background-image: url("images/bubbles-banner.png"); /* your bubble banner */
+      background-repeat: repeat-x;
+      background-size: cover;
+      border-bottom: 1px solid #004c80;
       position: relative;
+      color: #fff;
     }
 
     header img.logo {
       max-height: 60px;
     }
 
+    /* Desktop nav */
     nav.nav-links {
       display: flex;
       gap: 1rem;
@@ -54,41 +59,81 @@
 
     nav.nav-links a {
       text-decoration: none;
-      color: #333;
+      color: #fff;
       font-weight: 500;
+      transition: color 0.2s ease;
     }
 
-    /* Hamburger button */
+    nav.nav-links a:hover {
+      color: #ffdd57;
+    }
+
+    /* Hamburger button (mobile only) */
     .menu-toggle {
       display: none;
       font-size: 1.8rem;
+      cursor: pointer;
       background: none;
       border: none;
-      cursor: pointer;
+      color: #fff;
     }
 
     /* Mobile styles */
     @media (max-width: 768px) {
       nav.nav-links {
-        display: none; /* hidden by default */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 70px;
         right: 10px;
-        background: #f9f9f9;
+        background: #fff;
         border: 1px solid #ddd;
         border-radius: 8px;
         padding: 1rem;
         box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       }
 
-      nav.nav-links.show {
-        display: flex; /* shown when toggled */
+      nav.nav-links a {
+        color: #333;
+      }
+
+      nav.nav-links.active {
+        display: flex;
       }
 
       .menu-toggle {
         display: block;
       }
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .button {
+      display: inline-block;
+      background: #0077cc;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f4f4f4;
+      border-top: 1px solid #ddd;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -99,9 +144,10 @@
       <span class="visually-hidden">MEL Labs – Science for Better Beer</span>
     </h1>
 
-    <!-- Hamburger toggle for mobile -->
+    <!-- Hamburger menu button -->
     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
 
+    <!-- Nav links -->
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="pricing.html">Pricing</a>
@@ -125,14 +171,12 @@
   </footer>
 
   <script>
-    // Mobile nav toggle
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.querySelector(".menu-toggle");
-      const nav = document.querySelector(".nav-links");
+    // Toggle mobile nav
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
-      toggle.addEventListener("click", function () {
-        nav.classList.toggle("show");
-      });
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
     });
   </script>
 </body>
