@@ -3,12 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pricing – Mel Labs</title>
+  <title>Pricing – MEL Labs</title>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    /* Add this CSS to center the text */
     .center-text {
       text-align: center;
+    }
+    .card {
+      max-width: 450px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f9f9f9;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #0077cc;
+      margin: 1rem 0;
+    }
+    .email-button {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.2s ease-in-out;
+    }
+    .email-button:hover {
+      background: #005fa3;
+    }
+    .steps {
+      text-align: left;
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .steps li {
+      margin-bottom: 0.8rem;
     }
   </style>
 </head>
@@ -20,25 +57,39 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="pricing.html">Pricing</a>
+      <a href="treatment.html">Water Treatment Packets</a>
+      <a href="mailto:mel.labs.brewing@gmail.com">Contact Us</a>
     </nav>
   </header>
 
   <main>
-    <h2>Simple, Affordable Pricing</h2>
-
-    <h2>Affordable water test for homebrewing.</h2>
-
-    <h2>Homebrew water chemistry testing under $50.</h2>
+    <h2 class="center-text">Simple, Affordable Pricing</h2>
 
     <div class="card">
       <h3>First Test</h3>
       <p class="price">$24</p>
-      <p>One-time water analysis. Pay only after results.</p>
+      <p>One-time water analysis for homebrewing.  
+         <br><strong>Pay only after results are delivered.</strong></p>
+
+      <a 
+        href="mailto:mel.labs.brewing@gmail.com?subject=Water%20Test%20Request&body=Hello%20MEL%20Labs%2C%0D%0A%0D%0AI%20would%20like%20to%20order%20a%20water%20test.%20Please%20let%20me%20know%20where%20to%20send%20my%20sample.%0D%0A%0D%0AThank%20you!" 
+        class="email-button">
+        Request a Test
+      </a>
+
+      <ul class="steps">
+        <li>📦 You ship your water sample (12–16 oz) at your expense.</li>
+        <li>✉️ Track your shipment and confirm when we receive it.</li>
+        <li>🧪 We complete testing within <strong>3 business days</strong>.</li>
+        <li>💳 You’ll receive an email invoice for $24.</li>
+        <li>📑 Once payment is received, we’ll send your full water test report.</li>
+      </ul>
     </div>
   </main>
     
-   <footer>
+  <footer>
     <p>© 2025 MEL Labs | Science for Better Beer</p>
   </footer>
 </body>
 </html>
+
