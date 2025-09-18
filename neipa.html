@@ -7,20 +7,127 @@
   <link rel="stylesheet" href="style.css"/>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Targeted water treatment for New England IPA (NEIPA) brewing. Perfect chloride, sulfate, and calcium levels for a smooth, juicy, hazy brew." />
+  <meta name="description" content="Learn how water treatment affects NEIPA brewing. MEL Labs provides water testing and treatment for homebrewers." />
 
   <!-- Open Graph (Social Sharing) -->
   <meta property="og:title" content="NEIPA Water Treatment – MEL Labs" />
-  <meta property="og:description" content="Water adjustments for NEIPA brewing that enhance the juicy hop character and mouthfeel." />
+  <meta property="og:description" content="Discover how proper water treatment enhances NEIPA brewing. MEL Labs offers water treatment solutions for homebrewers." />
   <meta property="og:image" content="https://mel-labs-brewing.github.io/images/MEL-labs-logo.png" />
   <meta property="og:url" content="https://mel-labs-brewing.github.io/neipa.html" />
   <meta property="og:type" content="website" />
+
+  <style>
+    /* Accessibility */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    /* Header banner */
+    header {
+      background: linear-gradient(to bottom, #0077cc, #005fa3);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 img {
+      max-width: 180px;
+    }
+
+    /* Bubble animation */
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: rise 10s infinite ease-in;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-1200px) scale(0.5); opacity: 0; }
+    }
+
+    /* Nav */
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.8rem;
+      font-weight: bold;
+    }
+
+    /* Mobile nav */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 2px solid white;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: white;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: inline-block;
+      }
+    }
+
+    /* Main content */
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      background: #0077cc;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #f5f5f5;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>
       <img src="images/MEL-labs-logo.png" alt="MEL Laboratories Logo" class="logo"/>
-      <span class="visually-hidden">MEL Labs – NEIPA Water Treatment</span>
+      <span class="visually-hidden">NEIPA Water Treatment – MEL Labs</span>
     </h1>
 
     <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
@@ -32,28 +139,35 @@
       <a href="pricing.html">Pricing</a>
       <a href="https://mellabsbrewing.blogspot.com" target="_blank">Blog</a>
       <a href="treatment.html">Water Treatment Packets</a>
+      <a href="neipa.html">NEIPA Water Treatment</a>
       <a href="mailto:info@mellabsbrewing.com">Contact Us</a>
       <a href="https://www.facebook.com/profile.php?id=61580536066830" target="_blank">Facebook</a>
       <a href="https://melusinebeerco-collab.github.io/brews-bubbles-borders/homebrewing.html" target="_blank">Customer Testimonials</a>
     </nav>
+
+    <!-- Bubbles -->
+    <div class="bubble" style="left:10%; width:20px; height:20px; animation-duration:12s;"></div>
+    <div class="bubble" style="left:30%; width:15px; height:15px; animation-duration:10s;"></div>
+    <div class="bubble" style="left:50%; width:25px; height:25px; animation-duration:14s;"></div>
+    <div class="bubble" style="left:70%; width:18px; height:18px; animation-duration:11s;"></div>
+    <div class="bubble" style="left:90%; width:22px; height:22px; animation-duration:13s;"></div>
   </header>
 
   <main>
-    <h2>NEIPA Brewing Water Treatment</h2>
-
+    <h2>The NEIPA Water Treatment</h2>
     <p>The New England IPA (NEIPA), also known as Hazy IPA, emerged in the early 2010s as a response to the increasingly hop-forward West Coast IPAs, offering a smoother, juicier, and hazier alternative. Pioneered by breweries like The Alchemist and Tree House, NEIPAs became known for their soft mouthfeel, juicy hop character, and appearance with a cloudy haze. This haze comes from a combination of high-protein grains, such as oats and wheat, and careful dry-hopping techniques.</p>
 
     <p>The water profile in NEIPA plays a significant role in the overall experience, especially the balance of brewing salts like chloride, sulfate, and calcium. Higher chloride levels (200 ppm) accentuate the smooth, fuller mouthfeel, contributing to the beer’s roundness and softness. Lower sulfate levels (75 ppm) ensure that the beer's bitterness remains subdued, allowing the juicy, fruity hop flavors to shine through without a harsh finish. Maintaining calcium levels under 150 ppm helps stabilize the beer’s body and enhances the overall mouthfeel. These carefully balanced water adjustments help accentuate the juicy, fruity flavors and create a smooth, drinkable beer that's beloved by craft beer enthusiasts for its velvety, satisfying finish.</p>
 
     <h3>Pricing</h3>
-    <p>Our NEIPA water treatment service takes the guesswork out of achieving the perfect water profile. For a 5-gallon batch, we offer a water treatment packet for $2.00; for a 10-gallon batch, it’s $2.50, and for a 15-gallon batch, the fee is $3.00. Each packet includes three separate treatments:</p>
-    <ul>
-      <li>A packet for the mash water</li>
-      <li>A packet for the spare water</li>
-      <li>A final packet for the last 5 minutes of the boil</li>
+    <p>We offer a water treatment packet for NEIPA brewing to optimize your water profile. The pricing for our service is as follows:</p>
+    <p>With an extra fee of $2.00 for a 5-gallon batch, $2.50 for a 10-gallon batch, and $3.00 for a 15-gallon batch, you will receive the following:</p>
+    <ul style="list-style-type: none;">
+      <li>One packet for mash water</li>
+      <li>One packet for sparge water</li>
+      <li>One packet for the final 5 minutes of the boil to achieve the target levels of chloride, sulfate, and calcium.</li>
     </ul>
-    <p>These packets will ensure that your chloride, sulfate, and calcium levels are perfectly balanced, helping you create a NEIPA that maximizes juiciness, smoothness, and flavor, without disrupting the efficiency of your mash or sparge water.</p>
-
+    <p>These packets will allow you to achieve the ideal water profile for NEIPA brewing, ensuring that your beer has the optimal balance of juiciness and smooth mouthfeel.</p>
     <a class="button" href="pricing.html">View Full Pricing</a>
   </main>
 
