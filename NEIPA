@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEIPA Water Treatment – MEL Labs</title>
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Targeted water treatment for New England IPA (NEIPA) brewing. Perfect chloride, sulfate, and calcium levels for a smooth, juicy, hazy brew." />
+
+  <!-- Open Graph (Social Sharing) -->
+  <meta property="og:title" content="NEIPA Water Treatment – MEL Labs" />
+  <meta property="og:description" content="Water adjustments for NEIPA brewing that enhance the juicy hop character and mouthfeel." />
+  <meta property="og:image" content="https://mel-labs-brewing.github.io/images/MEL-labs-logo.png" />
+  <meta property="og:url" content="https://mel-labs-brewing.github.io/neipa.html" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="images/MEL-labs-logo.png" alt="MEL Laboratories Logo" class="logo"/>
+      <span class="visually-hidden">MEL Labs – NEIPA Water Treatment</span>
+    </h1>
+
+    <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
+      ☰ Menu
+    </button>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="https://mellabsbrewing.blogspot.com" target="_blank">Blog</a>
+      <a href="treatment.html">Water Treatment Packets</a>
+      <a href="mailto:info@mellabsbrewing.com">Contact Us</a>
+      <a href="https://www.facebook.com/profile.php?id=61580536066830" target="_blank">Facebook</a>
+      <a href="https://melusinebeerco-collab.github.io/brews-bubbles-borders/homebrewing.html" target="_blank">Customer Testimonials</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>NEIPA Brewing Water Treatment</h2>
+
+    <p>The New England IPA (NEIPA), also known as Hazy IPA, emerged in the early 2010s as a response to the increasingly hop-forward West Coast IPAs, offering a smoother, juicier, and hazier alternative. Pioneered by breweries like The Alchemist and Tree House, NEIPAs became known for their soft mouthfeel, juicy hop character, and appearance with a cloudy haze. This haze comes from a combination of high-protein grains, such as oats and wheat, and careful dry-hopping techniques.</p>
+
+    <p>The water profile in NEIPA plays a significant role in the overall experience, especially the balance of brewing salts like chloride, sulfate, and calcium. Higher chloride levels (200 ppm) accentuate the smooth, fuller mouthfeel, contributing to the beer’s roundness and softness. Lower sulfate levels (75 ppm) ensure that the beer's bitterness remains subdued, allowing the juicy, fruity hop flavors to shine through without a harsh finish. Maintaining calcium levels under 150 ppm helps stabilize the beer’s body and enhances the overall mouthfeel. These carefully balanced water adjustments help accentuate the juicy, fruity flavors and create a smooth, drinkable beer that's beloved by craft beer enthusiasts for its velvety, satisfying finish.</p>
+
+    <h3>Pricing</h3>
+    <p>Our NEIPA water treatment service takes the guesswork out of achieving the perfect water profile. For a 5-gallon batch, we offer a water treatment packet for $2.00; for a 10-gallon batch, it’s $2.50, and for a 15-gallon batch, the fee is $3.00. Each packet includes three separate treatments:</p>
+    <ul>
+      <li>A packet for the mash water</li>
+      <li>A packet for the spare water</li>
+      <li>A final packet for the last 5 minutes of the boil</li>
+    </ul>
+    <p>These packets will ensure that your chloride, sulfate, and calcium levels are perfectly balanced, helping you create a NEIPA that maximizes juiciness, smoothness, and flavor, without disrupting the efficiency of your mash or sparge water.</p>
+
+    <a class="button" href="pricing.html">View Full Pricing</a>
+  </main>
+
+  <footer>
+    <p>© 2025 MEL Labs | Science for Better Beer</p>
+  </footer>
+</body>
+</html>
