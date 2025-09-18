@@ -3,10 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MEL Labs</title>
+  <title>MEL Labs – Water Treatment Packets</title>
   <link rel="stylesheet" href="style.css"/>
 
   <style>
+    /* Accessibility helper */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
     /* Header banner */
     header {
       background: linear-gradient(to bottom, #0077cc, #005fa3);
@@ -19,13 +31,6 @@
 
     header h1 img {
       max-width: 180px;
-    }
-
-    /* Hide header title text on mobile, but keep the logo image */
-    @media (max-width: 768px) {
-      header h1 span {
-        display: none;
-      }
     }
 
     /* Bubble animation */
@@ -42,7 +47,7 @@
       100% { transform: translateY(-1200px) scale(0.5); opacity: 0; }
     }
 
-    /* Nav */
+    /* Navigation */
     nav {
       margin-top: 1rem;
     }
@@ -59,7 +64,7 @@
       background: none;
       border: 2px solid white;
       padding: 0.5rem 1rem;
-      font-size: 1.8rem;
+      font-size: 1rem;
       color: white;
       border-radius: 5px;
       margin-top: 1rem;
@@ -72,10 +77,6 @@
         gap: 1rem;
         margin-top: 1rem;
         background-color: #004080;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
         padding: 1rem;
         border-radius: 8px;
       }
@@ -83,7 +84,7 @@
         display: flex;
       }
       .menu-toggle {
-        display: block;
+        display: inline-block;
       }
       nav a {
         text-align: center;
@@ -196,18 +197,20 @@
       <span class="visually-hidden">MEL Labs</span>
     </h1>
 
-    <!-- Mobile-friendly nav -->
+    <!-- Mobile-friendly menu button -->
+    <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')" aria-label="Toggle navigation">
+      ☰ Menu
+    </button>
+
+    <!-- Navigation -->
     <nav>
-      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="https://mellabsbrewing.blogspot.com" target="_blank">Blog</a>
-        <a href="treatment.html">Water Treatment Packets</a>
-        <a href="mailto:mel.labs.brewing@gmail.com">Contact Us</a>
-        <a href="https://www.facebook.com/profile.php?id=61580536066830" target="_blank">Facebook</a>
-        <a href="https://melusinebeerco-collab.github.io/brews-bubbles-borders/homebrewing.html" target="_blank">Customer Testimonials</a>
-      </div>
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="https://mellabsbrewing.blogspot.com" target="_blank">Blog</a>
+      <a href="treatment.html">Water Treatment Packets</a>
+      <a href="mailto:mel.labs.brewing@gmail.com">Contact Us</a>
+      <a href="https://www.facebook.com/profile.php?id=61580536066830" target="_blank">Facebook</a>
+      <a href="https://melusinebeerco-collab.github.io/brews-bubbles-borders/homebrewing.html" target="_blank">Customer Testimonials</a>
     </nav>
 
     <!-- Floating bubbles -->
@@ -252,7 +255,7 @@
 
     <h3>Order Form</h3>
     <div class="form-container">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfEhpe_JbAWKhdiHhshQ5M6QVNndH7d1HSvOUGTQ6aKxii-yQ/viewform?usp=header" width="100%" height="1000px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfEhpe_JbAWKhdiHhshQ5M6QVNndH7d1HSvOUGTQ6aKxii-yQ/viewform?usp=header" frameborder="0">Loading...</iframe>
     </div>
 
     <!-- Image Section -->
@@ -265,14 +268,5 @@
   <footer>
     <p>© 2025 MEL Labs | Science for Better Beer</p>
   </footer>
-
-  <!-- Mobile nav script -->
-  <script>
-    const toggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-    toggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  </script>
 </body>
 </html>
