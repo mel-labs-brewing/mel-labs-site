@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MEL Labs – FAQ</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      background: #f5faff;
+      padding: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .faq-question:hover {
+      background: #e0f0ff;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0.75rem 1rem 1rem 1rem;
+      line-height: 1.5;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <!-- Site Header / Nav -->
+  <header>
+    <h1>MEL Labs</h1>
+    <p>Science for Better Beer</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="treatment.html">Water Treatment</a>
+      <a href="neipa.html">NEIPA Profile</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html" class="active">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- FAQ Content -->
+  <main>
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">Why does brewing water matter?</div>
+      <div class="faq-answer">Water makes up 90–95% of beer. Minerals in water affect mash efficiency, hop expression, and mouthfeel. The right profile makes your beer shine.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I send a water sample?</div>
+      <div class="faq-answer">Collect ~8 oz of tap water in a clean plastic bottle. No need to refrigerate. Ship it to us using regular mail — simple and fast.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How long does testing take?</div>
+      <div class="faq-answer">Turnaround is typically 3 business days after we receive your sample. We’ll email your results and treatment recommendations right away.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do I need to treat every batch?</div>
+      <div class="faq-answer">Yes — water chemistry shifts with each beer style. Our packets are tailored for mash and sparge water, so you get consistent results every brew day.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What if I don’t know which profile to choose?</div>
+      <div class="faq-answer">No problem! Just pick your beer style in our form. We’ll match it with the best water profile automatically.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I order packets without testing?</div>
+      <div class="faq-answer">Yes. If you already know your water or just want to experiment, you can order style-based packets directly.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What’s inside a treatment packet?</div>
+      <div class="faq-answer">Each packet contains precise amounts of brewing salts (like calcium chloride, gypsum, or Epsom) measured to hit the target profile without guesswork.</div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MEL Labs – Science for Better Beer</p>
+  </footer>
+
+  <!-- Script for FAQ toggle -->
+  <script>
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
