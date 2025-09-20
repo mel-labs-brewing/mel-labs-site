@@ -1,0 +1,43 @@
+<!-- MOCKUP for Google Sites layout -->
+<header>
+  <h1>MEL Labs – Science for Better Beer</h1>
+  <p>Affordable water testing & mineral treatment packets for homebrewers.</p>
+  <img src="images/MEL-labs-logo.png" alt="MEL Labs Logo" />
+</header>
+
+<main>
+  <section>
+    <h2>What We Do</h2>
+    <p>
+      At MEL Labs, we help homebrewers get the most out of their water.
+      From testing for chloride, sulfates, alkalinity, and hardness
+      to building custom treatment packets, we make water chemistry simple.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why Water Testing?</h2>
+    <p>
+      The right mineral balance drives mash efficiency, yeast health,
+      and beer flavor. We test for all the important brewing ions
+      and provide results designed to improve your brewing consistency.
+    </p>
+  </section>
+
+  <section>
+    <h2>Get Started</h2>
+    <p>
+      Ready to learn more? Visit our main website for pricing, packets,
+      and brewing tips.
+    </p>
+    <ul>
+      <li><a href="https://mel-labs-brewing.github.io/mel-labs-site/">🌐 Main Website</a></li>
+      <li><a href="https://mellabsbrewing.blogspot.com/">📖 Brewing Blog</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61580536066830">👍 Follow on Facebook</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 MEL Labs | Science for Better Beer</p>
+</footer>
