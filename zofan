@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZOFAN Pack – MEL Labs</title>
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="ZOFAN Water Treatment Pack: a last-15-minutes boil addition with zinc, diammonium phosphate, and whirlfloc to boost yeast health and fermentation quality." />
+
+  <!-- Open Graph (Facebook/Reddit) -->
+  <meta property="og:title" content="ZOFAN Pack – MEL Labs" />
+  <meta property="og:description" content="Boost yeast health with MEL Labs’ ZOFAN Water Treatment Pack: zinc, diammonium phosphate, and whirlfloc for healthy fermentations." />
+  <meta property="og:image" content="https://mel-labs-brewing.github.io/mel-labs-site/images/MEL-labs-logo.png" />
+  <meta property="og:url" content="https://mel-labs-brewing.github.io/mel-labs-site/zofan.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ZOFAN Pack – MEL Labs" />
+  <meta name="twitter:description" content="Yeast health simplified. The ZOFAN Pack brings zinc, FAN, and clarity aid to the boil for clean, strong fermentations." />
+  <meta name="twitter:image" content="https://mel-labs-brewing.github.io/mel-labs-site/images/MEL-labs-logo.png" />
+
+  <style>
+    /* Carry over theme from index */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    header {
+      background: linear-gradient(to bottom, #0077cc, #005fa3);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 img {
+      max-width: 180px;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: rise 10s infinite ease-in;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-1200px) scale(0.5); opacity: 0; }
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.8rem;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 2px solid white;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: white;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      nav.active { display: flex; }
+      .menu-toggle { display: inline-block; }
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      background: #0077cc;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    .pricing-box {
+      background: #f5f9ff;
+      border: 2px solid #0077cc;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.5rem auto;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .pricing-box h3 {
+      margin-bottom: 0.5rem;
+      color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #f5f5f5;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <img src="images/MEL-labs-logo.png" alt="MEL Laboratories Logo" class="logo"/>
+      <span class="visually-hidden">MEL Labs – ZOFAN Pack</span>
+    </h1>
+
+    <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
+      ☰ Menu
+    </button>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="treatment.html">Water Treatment Packets</a>
+        <a href="neipa.html">NEIPA Packets</a>
+        <a href="zofan.html" class="active">ZOFAN Pack</a>
+        <a href="faq.html">FAQ</a> 
+        <a href="https://mellabsbrewing.blogspot.com" target="_blank">Blog</a>
+        <a href="mailto:mel.labs.brewing@gmail.com">Contact Us</a>
+        <a href="https://www.facebook.com/profile.php?id=61580536066830" target="_blank">Facebook</a>
+        <a href="https://melusinebeerco-collab.github.io/brews-bubbles-borders/homebrewing.html" target="_blank">Customer Testimonials</a>
+    </nav>
+
+    <!-- Bubbles -->
+    <div class="bubble" style="left:10%; width:20px; height:20px; animation-duration:12s;"></div>
+    <div class="bubble" style="left:30%; width:15px; height:15px; animation-duration:10s;"></div>
+    <div class="bubble" style="left:50%; width:25px; height:25px; animation-duration:14s;"></div>
+    <div class="bubble" style="left:70%; width:18px; height:18px; animation-duration:11s;"></div>
+    <div class="bubble" style="left:90%; width:22px; height:22px; animation-duration:13s;"></div>
+  </header>
+
+  <main>
+    <h2>ZOFAN Water Treatment Pack</h2>
+    <p>
+      A custom boil-addition packet designed for the last 15 minutes of the boil. Each pack contains a precise blend of:
+    </p>
+    <ul style="text-align:left; max-width:600px; margin:1rem auto;">
+      <li><strong>Zinc</strong> – critical for yeast enzyme function and reproduction</li>
+      <li><strong>Diammonium Phosphate (DAP)</strong> – provides Free Amino Nitrogen (FAN) for strong growth</li>
+      <li><strong>Whirlfloc</strong> – ensures clarity and a clean break at the end of the boil</li>
+    </ul>
+
+    <p>
+      With one easy addition, you give your yeast everything it needs for clean fermentations, fast starts, and reuse across multiple batches.
+    </p>
+
+    <div class="pricing-box">
+      <h3>Pricing</h3>
+      <p><strong>$1.50</strong> – When ordered with mash and sparge packets for reverse osmosis (RO) or distilled water.</p>
+      <p><strong>$0.99</strong> – If we tested your water and you order mash and sparge packets with it.</p>
+    </div>
+
+    <a class="button" href="pricing.html">Order Now</a>
+
+    <!-- Educational blog section -->
+    <section style="margin-top:2rem; text-align:left;">
+      <h3>ZOFAN: The Key to Yeast Life Management</h3>
+      <p>
+        Every brewer knows fermentation makes or breaks the beer, but few think about what yeast actually needs to thrive beyond sugar. That’s where ZOFAN comes in—Zinc, Oxygen, and Free Amino Nitrogen (FAN). Together, these three resources are the foundation for strong yeast cell walls, clean budding, and the ability to reuse yeast across many generations.
+      </p>
+      <p>
+        Zinc is often missing in today’s highly modified malts, but it’s critical for enzyme function and yeast reproduction. A small addition at the end of the boil helps build durable cell walls and ensures budding cells form correctly. Oxygen, on the other hand, is essential during the lag phase. It allows yeast to synthesize sterols and unsaturated fatty acids—basically the building blocks for flexible, resilient membranes. And then there’s FAN, supplied by both the wort and supplements like DAP, which gives yeast the accessible nitrogen it needs to grow and avoid sluggish fermentations.
+      </p>
+      <p>
+        When you give yeast ZOFAN, you’re not just helping it finish one batch—you’re preparing it for reuse. Healthy vacuoles (the yeast’s “resource sacks”) store the reserves needed for daughter cells and future generations. That means fewer off-flavors, faster starts, and yeast you can trust for pitch after pitch.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 MEL Labs | Science for Better Beer</p>
+  </footer>
+</body>
+</html>
